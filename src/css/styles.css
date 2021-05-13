@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+body {
+  background-image: url("/src/img/cork.jpeg");
+  background-size: 240px;
+  min-height: 100vh;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: white;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+h2:hover {
+  cursor: pointer;
+}
+
+h2:hover:before {
+  content: "❌";
+  display: block;
+  font-size: 0.8rem;
+  float: left;
+  margin: 13px 10px 0 0;
+  cursor: pointer;
+  color: transparent;
+  text-shadow: 0 0 1px white, -1px -1px 1px white, -1px 1px 1px white,
+    1px 1px 1px white, 1px -1px 1px white;
+  position: relative;
+}
+
+[data-categories-container] {
+  padding-bottom: 2.5rem;
+  max-height: auto;
+  height: 100%;
+  min-height: 100vh;
+  /* border: 1px solid red; */
+}
+
+.sticky-buttons {
+  /* border: 1px solid pink; */
+  position: absolute;
+  bottom: 20;
+  right: 20;
+}
+
+#todo-container {
+  border: 31px solid transparent;
+  border-image-source: url("/src/img/corkborder.png");
+  border-image-slice: 31 29;
+  border-image-width: 31px 29px;
+}
+
+[data-draggable-container] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid magenta; */
+}
+
+.draggable {
+  cursor: move;
+}
+
+[data-draggable-container] {
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+[data-draggable-item].dragging {
+  opacity: 0.5;
+}
+
+.dont-break-out {
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.task-description {
+  /* padding-top: 0.5em; */
+  padding-left: 1em;
+  padding-right: 1.4em;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.icon-delete {
+  font-size: 1rem;
+  color: red;
+}
+
+.icon-check {
+  font-size: 1rem;
+  color: green;
+}
+
+.icon-edit {
+  font-size: 1rem;
+  color: royalblue;
+}
+
+.sticky-pin {
+  position: absolute;
+  z-index: 10;
+  top: 5;
+  /* right: 10; */
+  width: 40px;
+}
+
+[contenteditable] {
+  outline: 0px solid transparent;
+}
+
+h6.completed {
+  text-decoration: line-through;
+}
+
+/* Some positioning and ratios */
+.sticky-container {
+  /* border: 1px solid greenyellow; */
+  width: 270px;
+  position: relative;
+}
+
+.sticky-outer {
+  display: flex;
+  padding-top: 92.5925926%;
+  position: relative;
+  width: 100%;
+}
+
+.sticky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Shadow behind the sticky note */
+.sticky:before {
+  box-shadow: -2px 2px 15px 0 rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.25);
+  content: "";
+  width: 90%;
+  left: 5px;
+  height: 75%;
+  position: absolute;
+  top: 30%;
+}
+
+/* The sticky note itself */
+.sticky-content {
+  background: linear-gradient(
+    180deg,
+    rgba(187, 235, 255, 1) 0%,
+    rgba(187, 235, 255, 1) 12%,
+    rgba(170, 220, 241, 1) 75%,
+    rgba(195, 229, 244, 1) 100%
+  );
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Kalam", cursive;
+  font-size: 1.25rem;
+
+  clip-path: url(#stickyClip);
+}
+
+/* Some responsiveness */
+@media screen and (min-width: 640px) {
+  .sticky-content {
+    font-size: 1.5rem;
+  }
+  .container-inner {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sticky-content {
+    font-size: 1.5rem;
+  }
+  .container-inner {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sticky-content {
+    font-size: 1.875rem;
+  }
+  .container-inner {
+    width: 25%;
+  }
+}

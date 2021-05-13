@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>📋📌 Get Sh#t Done</title>
+    <!-- <link rel="stylesheet" type="text/css" href="src/css/reset.css" /> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="src/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <script defer src="src/js/script.js"></script>
+  </head>
+
+  <body class="d-flex flex-column h-100">
+    <!-- Beginning of top nav -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">📋📌 Get Sh#t Done - A Trello Clone</a>
+      </div>
+    </nav>
+    <!-- End of top nav -->
+    <!-- Beginning of main categories + tasks section. Most data will be injected here -->
+    <section id="todo-container">
+      <div class="container">
+        <div
+          class="row justify-content-center align-items-start"
+          data-categories-container
+        ></div>
+      </div>
+    </section>
+    <!-- End of main categories + tasks section -->
+    <!-- Beginning of footer -->
+    <footer class="footer pt-2 py-3 bg-light">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-3 col-sm-3">
+            <div class="form-check form-switch pt-3" data-switcher>
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="flexSwitchCheckChecked"
+                checked
+              />
+              <label class="form-check-label" for="flexSwitchCheckChecked"
+                >Add category</label
+              >
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-7" data-input-containers>
+            <div class="input-group mt-3" data-add-category>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Add a new category"
+                maxlength="20"
+                aria-label="Add a new category"
+                aria-describedby="button-addon"
+              />
+              <button class="btn btn-primary" type="button" id="button-addon2">
+                + Category
+              </button>
+            </div>
+            <div class="input-group mt-3" data-add-task hidden>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Add a new task"
+                maxlength="256"
+                aria-label="Add a new task"
+                aria-describedby="button-addon"
+              />
+              <button class="btn btn-primary" type="button" id="button-addon2">
+                + Task
+              </button>
+            </div>
+            <select
+              class="form-select mt-3"
+              aria-label="select the task category"
+              data-add-task-selector
+              hidden
+            >
+            </select>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End of footer -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

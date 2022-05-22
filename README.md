@@ -10,4 +10,4 @@ Drag & drop the tasks around, add new ones, edit them, add/delete categories. Da
 
 # 🚀 Live version
 
-A [Live version of the app](https://get-shit-done-now.vercel.app/) can be found here!
+A [Live version of the app](https://get-shit-done.ben.express/) can be found here!

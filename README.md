@@ -6,6 +6,8 @@ You're provided with a **Kanban corkboard**  where you can pin notes/tasks in di
 
 Drag & drop the tasks around, add new ones, edit them, add/delete categories. Data persistence is provided through localStorage.
 
+![Get sh#t done](https://raw.githubusercontent.com/MyElectricSheep/Get-Shit-Done/main/get-sh-t-done-screenshot.png)
+
 # 🚀 Live version
 
 A [Live version of the app](https://get-shit-done-now.vercel.app/) can be found here!
